@@ -1,5 +1,8 @@
+#!/bin/sh
+
+mkdir -p "$HOME/home"
 docker run --rm -it \
-	-v $HOME:/home/`whoami` \
+	-v $HOME/home:/home/`whoami` \
 	-v /var/run:/srv/host.var.run \
 	-v /tmp:/srv/host.tmp \
 	--privileged=true \
