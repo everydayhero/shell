@@ -16,4 +16,7 @@ gpasswd -a $username docker
 gpasswd -a $username sudo
 yes "$username" | passwd $username
 
-exec sudo -u $username -i
+SSH_AUTH_SOCK=`echo $SSH_AUTH_SOCK | sed -e 's,^/tmp,,'`
+export SSH_AUTH_SOCK="/srv/host.tmp${SSH_AUTH_SOCK}"
+
+exec sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" -u $username -i
