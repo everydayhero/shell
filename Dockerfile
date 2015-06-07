@@ -1,4 +1,4 @@
-FROM debian:unstable 
+FROM debian:jessie
 RUN apt-get update
 RUN apt-get install -y vim-nox build-essential git
 RUN apt-get install -y curl wget procps
@@ -16,3 +16,4 @@ RUN ln -s /srv/host.var.run/docker.sock /var/run/docker.sock
 ADD user-enter.sh /usr/local/bin/
 
 ENTRYPOINT ["/usr/local/bin/user-enter.sh"]
+CMD ["/bin/bash"]
