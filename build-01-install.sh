@@ -8,6 +8,7 @@ PACKAGES="
   build-essential
   curl
   git
+  openssh-client
   procps
   sudo
   vim-nox
