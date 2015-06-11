@@ -4,6 +4,7 @@ source /build/buildconfig
 set -x
 
 PACKAGES="
+  ansible
   build-essential
   curl
   git
