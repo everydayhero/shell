@@ -10,6 +10,7 @@ fi
 
 ## Use cloudfront debian mirror
 sed -i -e 's,httpredir.debian.org,cloudfront.debian.net,' /etc/apt/sources.list
+echo 'deb http://cloudfront.debian.net/debian jessie-backports main' >> /etc/apt/sources.list
 apt-get update
 
 ## Install HTTPS support for APT.

@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:jessie
 MAINTAINER Jonathon M. Abbott <jma@dandaraga.net>
 
 ADD . /build

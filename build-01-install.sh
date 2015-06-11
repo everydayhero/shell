@@ -6,6 +6,7 @@ set -x
 PACKAGES="
   build-essential
   curl
+  docker.io
   git
   procps
   sudo
