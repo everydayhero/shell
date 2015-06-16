@@ -5,7 +5,6 @@ set -x
 
 PACKAGES="
   ansible
-  build-essential
   curl
   git
   openssh-client
