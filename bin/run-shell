@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG_FILE=~/.dockershellrc
+CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/docker-shell"
 
 plain_shell_env() {
 cat <<EOF
