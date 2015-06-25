@@ -12,6 +12,8 @@ PACKAGES="
   sudo
   vim-nox
   wget
+  mysql-client-5.5
+  postgresql-client
 "
 
 $minimal_apt_get_install $PACKAGES
