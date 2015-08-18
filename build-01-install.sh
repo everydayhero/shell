@@ -14,6 +14,7 @@ PACKAGES="
   wget
   mysql-client-5.5
   postgresql-client
+  redis-tools
 "
 
 $minimal_apt_get_install $PACKAGES
