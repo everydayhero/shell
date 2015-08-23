@@ -15,6 +15,7 @@ PACKAGES="
   mysql-client-5.5
   postgresql-client
   redis-tools
+  nmap
 "
 
 $minimal_apt_get_install $PACKAGES
