@@ -2,6 +2,9 @@
 
 steps:
   -
+    type: "waiter"
+
+  -
     name: "Build docker image"
     command: "docker build -t \"quay.io/everydayhero/shell\" ."
     agents:
