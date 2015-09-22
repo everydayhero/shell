@@ -1,0 +1,34 @@
+# buildkite.yml
+
+steps:
+  -
+    name: "Build docker image"
+    command: "docker build -t \"quay.io/everydayhero/shell\" ."
+    agents:
+      - "plain_utils=true"
+
+  -
+    type: "waiter"
+
+  -
+    name: "Push docker image"
+    command: "docker push quay.io/everydayhero/shell"
+
+  -
+    type: "waiter"
+
+  -
+    name: "Update staging shell"
+    command: "plain-utils shell-update staging"
+    agents:
+      - "plain_utils=true"
+
+  -
+    type: "manual"
+
+  -
+    name: "Update production shell"
+    command: "plain-utils shell-update production"
+    branches: "master"
+    agents:
+      - "plain_utils=true"
