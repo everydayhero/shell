@@ -14,6 +14,7 @@ PACKAGES="
   wget
   mysql-client-5.5
   postgresql-client
+  python-httplib2
   redis-tools
   nmap
 "
