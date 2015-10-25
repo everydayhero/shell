@@ -10,7 +10,7 @@ TMPFILE=$(mktemp /tmp/rabbitmqadmin.XXXXXX)
 wget $RABBITMQADMIN_URL -O $TMPFILE
 
 if [[ "$(sha256sum $TMPFILE | awk '{ print $1 }')" = "${RABBITMQADMIN_SHA}" ]]; then
-	chmod +x $TMPFILE
+	chmod 0755 $TMPFILE
 	mv $TMPFILE /usr/local/bin/rabbitmqadmin
 	rabbitmqadmin --bash-completion > /etc/bash_completion.d/rabbitmqadmin
 else
