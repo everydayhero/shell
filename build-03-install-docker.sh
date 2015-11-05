@@ -3,11 +3,11 @@ set -e
 source /build/buildconfig
 set -x
 
-docker_version=1.5.0
+DOCKER_VERSION=1.7.1-0~jessie
 
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
-echo "deb https://get.docker.io/ubuntu docker main" > /etc/apt/sources.list.d/docker.list
+echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
 
 apt-get update
-apt-get install -y lxc-docker-$docker_version
+apt-get install -y docker-engine=$DOCKER_VERSION
