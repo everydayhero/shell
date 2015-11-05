@@ -23,6 +23,7 @@ steps:
   -
     name: "Update staging shell"
     command: "plain-utils shell-update staging"
+    branches: "master"
     agents:
       - "plain_utils=true"
 
