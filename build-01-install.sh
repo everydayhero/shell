@@ -4,19 +4,25 @@ source /build/buildconfig
 set -x
 
 PACKAGES="
-  ansible
   curl
+  gcc
   git
+  mysql-client-5.5
+  nmap
   openssh-client
+  postgresql-client
   procps
+  python-dev
+  python-httplib2
+  python-pip
+  python-software-properties
+  redis-tools
+  software-properties-common
   sudo
   vim-nox
   wget
-  mysql-client-5.5
-  postgresql-client
-  python-httplib2
-  redis-tools
-  nmap
 "
 
 $minimal_apt_get_install $PACKAGES
+
+pip install ansible
