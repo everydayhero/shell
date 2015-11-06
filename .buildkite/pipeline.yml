@@ -18,7 +18,7 @@ steps:
     command: "docker push quay.io/everydayhero/shell"
 
   -
-    type: "waiter"
+    type: "manual"
 
   -
     name: "Update staging shell"
