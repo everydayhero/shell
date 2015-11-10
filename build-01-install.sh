@@ -13,9 +13,7 @@ PACKAGES="
   postgresql-client
   procps
   python-dev
-  python-httplib2
   python-pip
-  python-software-properties
   redis-tools
   software-properties-common
   sudo
@@ -25,4 +23,4 @@ PACKAGES="
 
 $minimal_apt_get_install $PACKAGES
 
-pip install ansible
+pip install ansible httplib2
