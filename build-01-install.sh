@@ -25,4 +25,4 @@ PACKAGES="
 
 $minimal_apt_get_install $PACKAGES
 
-pip install ansible
+pip install ansible docker-py
